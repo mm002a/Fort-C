@@ -1,5 +1,8 @@
 language: c
-script: make
+jobs:
+   include:
+      - script: make
+      - script: ./hellomake.exe
 notifications:
   email:
     recipients:
