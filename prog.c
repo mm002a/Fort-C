@@ -6,7 +6,7 @@ float A, pie;
 int main() {
    /* my first program in C */
    A = 1.5;
-   printf("Hello, World!- A: %d\n",A);
+   printf("Hello, World!- A: %E\n",A);
    pie = func(A);
    printf("pie: %E \n",pie);
    pie = 4.0*atan(1.0);
