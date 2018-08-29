@@ -2,4 +2,7 @@ language: c
 script: make
 notifications:
   email:
-    - chrispthompson@gmail.com
+    recipients:
+        - chrispthompson@gmail.com
+    on_success: always
+    on_failure: always

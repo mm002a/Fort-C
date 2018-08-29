@@ -13,11 +13,3 @@ int main() {
    printf("pi: %E \n",pie);
    return 0;
 }
-float func(float B)
-             {
-   float C;
-
-   printf("B: %E \n", B);
-   C = 1.2*B;
-   return C;
-}
