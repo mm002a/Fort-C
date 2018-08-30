@@ -3,7 +3,7 @@ notifications:
   email:
     recipients:
         - chrispthompson@gmail.com
-    template:
+    template: #Doesn't seem to do anything! Does it only work for irc?
       - "%{repository_slug} (%{commit}) : %{message} %{foo} "
       - "Build details: %{build_url}"
       - "Result: %{result}"
@@ -12,5 +12,6 @@ notifications:
 compiler:
     -gcc
 script:
-    - make && ./hellomake.exe
+    - make && ./hellomake.exe > oofile
     - pwd
+    - cat oofile
