@@ -16,7 +16,7 @@ env:
 jobs:
    include:
       - script: make
-      - script: ./hellomake.exe 
+      - script: /home/travis/.travis/job_stages/hellomake.exe 
    cache:
      apt: true
      directories:
