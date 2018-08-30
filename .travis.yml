@@ -2,7 +2,7 @@ language: c
 jobs:
    include:
       - script: make
-      - script: ./hellomake.exe
+      - script: rm ofile; ./hellomake.exe > ofile
 notifications:
   email:
     recipients:
