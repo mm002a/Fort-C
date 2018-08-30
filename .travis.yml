@@ -11,6 +11,7 @@ notifications:
     on_failure: always
 compiler:
     -gcc
+    -clang
 script:
     - make && ./hellomake.exe > oofile
     - pwd
