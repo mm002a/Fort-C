@@ -16,7 +16,7 @@ env:
 jobs:
    include:
       - script: make
-      - script hellomake.exe > oofile
+      - script: hellomake.exe > oofile
    cache:
      apt: true
      directories:
