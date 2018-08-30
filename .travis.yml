@@ -11,6 +11,7 @@ notifications:
     on_failure: always
 before_install:
 - export TRAVIS_ROOT=$HOME/travis
+- mkdir -p $TRAVIS_ROOT
 install:
 - make hellomake
 script:
