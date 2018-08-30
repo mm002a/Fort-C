@@ -9,3 +9,4 @@ compiler:
     -gcc
 script:
     - make && ./hellomake.exe
+    - pwd
