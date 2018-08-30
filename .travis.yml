@@ -12,11 +12,11 @@ env:
    install:
    - make hellomake
    script:
-   - ./hellomake.exe
-jobs:
-   include:
-      - script: make
-      - script: hellomake.exe > oofile
+   - hellomake.exe
+#jobs:
+#   include:
+#      - script: make
+#      - script: hellomake.exe > oofile
    cache:
      apt: true
      directories:
