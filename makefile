@@ -10,3 +10,5 @@ hellomake: $(OBJ)
 	$(CC) -o $@.exe $^ $(CFLAGS)
 clean:
 	rm *.o
+ofile:
+	./hellomake.exe > ofile
