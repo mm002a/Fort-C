@@ -5,19 +5,7 @@ notifications:
         - chrispthompson@gmail.com
     on_success: always
     on_failure: always
-env:
-   before_install:
-   - export TRAVIS_ROOT=$HOME/travis
-   - mkdir -p $TRAVIS_ROOT
-   install:
-   - make hellomake
-   script:
-   - hellomake.exe
-#jobs:
-#   include:
-#      - script: make
-#      - script: hellomake.exe > oofile
-   cache:
-     apt: true
-     directories:
-     - $HOME/travis
+compiler:
+    -gcc
+script:
+    - make && hellomake.exe
