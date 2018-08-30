@@ -1,8 +1,4 @@
 language: c
-jobs:
-   include:
-      - script: make
-      #- script: rm ofile; ./hellomake.exe > ofile
 notifications:
   email:
     recipients:
@@ -17,6 +13,10 @@ env:
    - make hellomake
    script:
    - ./hellomake
+jobs:
+   include:
+      - script: make
+      - script: ./hellomake.exe 
    cache:
      apt: true
      directories:
