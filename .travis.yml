@@ -1,7 +1,7 @@
 language: c
-#jobs:
-   #include:
-      #- script: make
+jobs:
+   include:
+      - script: make
       #- script: rm ofile; ./hellomake.exe > ofile
 notifications:
   email:
