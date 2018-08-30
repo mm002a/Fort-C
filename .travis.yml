@@ -3,6 +3,10 @@ notifications:
   email:
     recipients:
         - chrispthompson@gmail.com
+    template:
+      - "%{repository_slug} (%{commit}) : %{message} %{foo} "
+      - "Build details: %{build_url}"
+      - "Result: %{result}"
     on_success: always
     on_failure: always
 compiler:
