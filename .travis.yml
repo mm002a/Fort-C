@@ -12,7 +12,7 @@ env:
    install:
    - make hellomake
    script:
-   - ./hellomake
+   - ./hellomake.exe
 jobs:
    include:
       - script: make
