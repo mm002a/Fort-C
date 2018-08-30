@@ -1,11 +1,17 @@
 language: c
-jobs:
-   include:
-      - script: make
-      - script: rm ofile; ./hellomake.exe > ofile
+#jobs:
+   #include:
+      #- script: make
+      #- script: rm ofile; ./hellomake.exe > ofile
 notifications:
   email:
     recipients:
         - chrispthompson@gmail.com
     on_success: always
     on_failure: always
+before_install:
+- export TRAVIS_ROOT=$HOME/travis
+install:
+- make hellomake
+script:
+- ./hellomake
