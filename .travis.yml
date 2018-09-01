@@ -3,6 +3,8 @@ notifications:
   email:
     recipients:
         - chrispthompson@gmail.com
+ #notifications:
+    slack: ibm-uk-labs:42MJmUKnRLBKZXzfz3sK5XKy
     template: #Doesn't seem to do anything! Does it only work for irc?
       - "%{repository_slug} (%{commit}) : %{message} %{foo} "
       - "Build details: %{build_url}"
