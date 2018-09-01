@@ -1,8 +1,8 @@
 language: c
 notifications:
   email:
-    recipients:
-        - chrispthompson@gmail.com
+    #recipients: Maybe we can have email OR slack, but not both!
+       # - chrispthompson@gmail.com
  #notifications:
     slack: ibm-uk-labs:42MJmUKnRLBKZXzfz3sK5XKy
     template: #Doesn't seem to do anything! Does it only work for irc?
