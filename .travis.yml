@@ -1,6 +1,6 @@
 language: c
 notifications:
-  email:
+  #email:
     #recipients: Maybe we can have email OR slack, but not both!
        # - chrispthompson@gmail.com
  #notifications:
