@@ -23,4 +23,6 @@ script:
     - make hellomakec && ./hellomakec.exe > oofile
     - pwd
     - cat oofile
+    - git commit -a -message="From Travis-ci"
+    - git push
     - make hellomakef && ./hellomakef.exe
