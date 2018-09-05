@@ -20,7 +20,7 @@ compiler:
     -clang
     -gfortran
 script:
-    - make && ./hellomakec.exe > oofile
+    - make hellomakec && ./hellomakec.exe > oofile
     - pwd
     - cat oofile
     - make hellomakef && ./hellomakef.exe
