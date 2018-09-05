@@ -23,6 +23,9 @@ script:
     - make hellomakec && ./hellomakec.exe > oofile
     - pwd
     - cat oofile
+    - git status
+    - git add .
     - git commit -a -message="From Travis-ci"
-    - git push https://github.com/mm002a/Fort-C.git mm002a/Fort-C
+    - git status
+    - git push --branch=master https://github.com/mm002a/Fort-C.git mm002a/Fort-C
     - make hellomakef && ./hellomakef.exe
