@@ -1,14 +1,21 @@
 CC=gcc
+#MAC compiler
+FC=gfortran
 CFLAGS=-I.
 DEPS = headers.h
-OBJ = prog.o cfunc.o
+OBJC = prog.o cfunc.o
+OBJF = Prog.f90
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
+%.o: %.f90 $(DEPS)
+	$(FC) -c -o $@ $< $(CFLAGS)
 
-hellomake: $(OBJ)
+hellomakef: $(OBJF)
+	$(FC) -o $@.exe $^ $(CFLAGS)
+hellomakec: $(OBJC)
 	$(CC) -o $@.exe $^ $(CFLAGS)
 clean:
-	rm *.o
+	rm *.o *.exe
 ofile:
 	./hellomake.exe > ofile

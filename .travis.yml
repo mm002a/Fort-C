@@ -14,7 +14,9 @@ notifications:
 compiler:
     -gcc
     -clang
+    -gfortran
 script:
-    - make && ./hellomake.exe > oofile
+    - make && ./hellomakeic.exe > oofile
     - pwd
     - cat oofile
+    - make hellomakef && ./hellomakef.exe
