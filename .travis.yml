@@ -1,3 +1,7 @@
+addons:
+  apt:
+    packages:
+    - gfortran
 language: c
 notifications:
   #email:
