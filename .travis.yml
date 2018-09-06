@@ -27,6 +27,8 @@ script:
     - make hellomakef && ./hellomakef.exe
     - make hellomakef && ./hellomakef.exe
 after_success:
+  - echo "After SUCCESS"
+  - uname -a
   - .travis/push.sh
 env:
   global:
