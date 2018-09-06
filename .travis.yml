@@ -27,7 +27,7 @@ script:
     - make hellomakef && ./hellomakef.exe
     - uname -a
     - echo "End of script"
-after_success:
+#after_success: # Does this work?
   - echo "After SUCCESS"
   - uname -a
   - .travis/push.sh
