@@ -1,16 +1,14 @@
 #!/bin/bash -v
 
 echo "in <push.sh>"
-echo ONLY PUSH ON TRAVIS!
-whoami
+#echo ONLY PUSH ON TRAVIS!
 if [ `/usr/bin/whoami` == "travis" ] ; 
 then
   echo "Looks like TRAVIS-CI" ;
+  echo TRAVIS BUILD NUMBER: $TRAVIS_BUILD_NUMBER
 else
   echo Not TRAVIS - EXIT
-  exit
 fi
-exit # for debug purposes
 
 setup_git() {
   git config --global user.email "travis@travis-ci.org"

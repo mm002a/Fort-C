@@ -1,7 +1,9 @@
-#!/bin/sh -v
+#!/bin/bash -v
 uname -a
+#echo (( `uname` == Darwin ))
 #if [  -e .travis ] ;
-if [ `uname` == Darwin ] ;
+#if [ `uname` == "Darwin" ] ;
+if [ `/usr/bin/whoami` == "ChristopherThompson" ] ;
 then
  echo LOOKS LIKE Darwin
 else 
