@@ -4,23 +4,30 @@ addons:
     - gfortran
 language: c
 notifications:
-  slack: ibm-uk-labs:42MJmUKnRLBKZXzfz3sK5XKy
-  template:
-  - "%{repository_slug} (%{commit}) : %{message} %{foo} "
-  - 'Build details: %{build_url}'
-  - 'Result: %{result}'
-  on_success: always
-  on_failure: always
-compiler: "-gcc -clang -gfortran"
+  #email:
+    #recipients: Maybe we can have email OR slack, but not both!
+       # - chrispthompson@gmail.com
+ #notifications:
+    #slack: ibm-uk-labs:token??
+    #template: #Doesn't seem to do anything! Does it only work for irc?
+    #  - "%{repository_slug} (%{commit}) : %{message} %{foo} "
+    #  - "Build details: %{build_url}"
+    #  - "Result: %{result}"
+    on_success: always
+    on_failure: always
+compiler:
+    -gcc
+    -clang
+    -gfortran
 script:
-- make hellomakec && ./hellomakec.exe > oofile
-- pwd
-- cat oofile
-- git commit -a -message="From Travis-ci"
-- git push https://github.com/mm002a/Fort-C.git mm002a/Fort-C
-- make hellomakef && ./hellomakef.exe
+    - make hellomakec && ./hellomakec.exe > oofile
+    - pwd
+    - cat oofile
+    # look at https://gist.github.com/willprice/e07efd73fb7f13f917ea
+    - make hellomakef && ./hellomakef.exe
+    - make hellomakef && ./hellomakef.exe
+after_success:
+  - .travis/push.sh
 env:
   global:
-    secure: vBqe3rNPPikG1Oo7DtxYJu52loyYJfRl4seSIgGYZM5+jUlIaP73k1rEF5Zd3SHGu+jyxp1YzAlm5ORk3CKmvSCGm9z1ObhMbuE2dld+Zglqj2UvcFLrBSlCwPUsRPy18SOCOjKbB59B7IFAQ+T2cFKJOIupAYIfTredzZs4b2PCY6troYAbodm+Z2uG4vN6YIOQLzjGZTJjYCQ7rzYbeRcY1FQkyTOGh7oP0mgV72Y340UzgEdd9U2jkSrnbCTBL0XYecUnEyZ+NeJ5BxDYGpyy6IBfdlLsL905JW8fkW1RM7PKqjbAQsilyq8p8PI6W+KmGdI0SJ/E8pjufQQm5QzAddRemkD91BU1DkS7ktF2oJvvZP7/zRHMevqnMGTKTPl9TLKd/vKje5l3J0jUXP5eOL+p+QVQkpIkBEmkwMcxi1kTXGmBJCqeWCOxCnyeUmgt0pGyMqFt8MbMvbRGyZ9iZzgyK8W7nFCa10YI0Jy8DJmxx+5on9Vg1U3uHbByu5N58BYNxtG0839CbpWqAaY2kh7YOiAiLBMIdeuLGrYHWtMk5plC0zifLFUeqUEUi2UunD+UHEakZQBVvhrCNUMiUFgMq3AuLlrNl2v26EFNJ6SZF7Hj5ieSAro/2or1C8vBqhEhizV4Y03x2gZ29IUZToD9HMKU6crdAE4Bxvs=
-dd:
-  secure: UDTlufJ8kexqWpbR33uruaozai+DHzePgthUCKbMLwe8p5DbfeYoSMUb71OiNePJPXqV5qEdQrRyuLwqWXaJ/QgmpkQZ8vj6p55tlOh7XAZ1d6ULHoq7hCXukDvICFOg7OPdoQkppogadL8S2A/KeX35CRLC1R4GjiZ6oNOFThMN44qrkMcB4WuAHZvsZudoMMX4HDxu4zgulbb7Rwrw5r//qCYvvns17mdWHiHmYOdQ9gDQUGoHEq3x6/U6YGbVxQh0I7eZE9FiUPKN3aEkZRpThBOWy828w+psMLZbO/5KqGVjNI1Y/hi7F48hdCasJ+16R/eDjxZW5o0IqrIRl7ELiub7C20PuAWwQlKAq4M/iqNTprDGzY5rLaOrNbDdxsXaY9FsFVTevDdcs9LTKmbZEIPxhRy28xkmFZGUpbk1wDiVgSrIQUu/VTI1Qy8DzqhQ0s7nPqPK4b2fJr749K/IbSgEtCT/EPeYUeG69nkpiC79xZbKXi0gWcP+J0BpuXjmauz6cbpqbdDg7zXgTffeqIa0+MgBVLkYPdAs5vsGuJp2C5cPaJVkIRrAr50JMkB+noR0O4+ydGx/RQmeqNVFgnGy2rWuUQOK4TdO6H8R9HS+6sE0EPyMcBangFqXa9wK0sjOmeSJxjKTUZSX77/gr7ZhT+KzYOZaDK7rwbg=
+    secure: # Add weird token
