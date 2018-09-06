@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/sh -v
+
+echo "in <push.sh>"
 
 setup_git() {
   git config --global user.email "travis@travis-ci.org"
