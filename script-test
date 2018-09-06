@@ -1,0 +1,13 @@
+#!/bin/sh -v
+uname -a
+#if [  -e .travis ] ;
+if [ `uname` == Darwin ] ;
+then
+ echo LOOKS LIKE Darwin
+else 
+ echo ELSE CLAUSE
+ exit
+fi
+echo AFTER IF
+exit
+echo AFTER EXIT # Shouldn't ever see this!
