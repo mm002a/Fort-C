@@ -31,6 +31,3 @@ script:
    - echo "After SUCCESS"
    - uname -a
    - .travis/push.sh
-env:
-  global:
-    secure: # Add weird token
