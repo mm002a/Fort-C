@@ -3,7 +3,7 @@
 echo "in <push.sh>"
 echo ONLY PUSH ON TRAVIS!
 whoami
-if [ `whoami` == travis ] ; 
+if [ `whoami` == "travis" ] ; 
 then
   echo "Looks like TRAVIS-CI" ;
 else
