@@ -23,6 +23,7 @@ script:
     - make hellomakec && ./hellomakec.exe > oofile
     - pwd
     - cat oofile
+    # look at https://gist.github.com/willprice/e07efd73fb7f13f917ea
     - git status
     - git add .
     - git commit -a -message="From Travis-ci"
