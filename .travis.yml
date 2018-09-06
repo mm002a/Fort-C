@@ -5,7 +5,7 @@ addons:
 language: c
 notifications:
   email:
-    recipients: # We can have email OR slack, but not both!
+    recipients:
         - chrispthompson@gmail.com
  #notifications:
     #slack: ibm-uk-labs:token??
