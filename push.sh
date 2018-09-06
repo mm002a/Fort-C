@@ -3,7 +3,7 @@
 echo "in <push.sh>"
 echo ONLY PUSH ON TRAVIS!
 uname -a
-if [ -e .travis ] ; 
+if [ `whoami` == travis ] ; 
 then
   echo "Looks like TRAVIS-CI" ;
 else
