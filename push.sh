@@ -1,8 +1,16 @@
 #!/bin/sh -v
 
 echo "in <push.sh>"
+echo ONLY PUSH ON TRAVIS!
 uname -a
-exit
+if [ -e .travis ] ; 
+then
+  echo "Looks like TRAVIS-CI" ;
+else
+  echo Not TRAVIS - EXIT
+  exit
+fi
+exit # for debug purposes
 
 setup_git() {
   git config --global user.email "travis@travis-ci.org"
