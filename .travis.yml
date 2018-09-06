@@ -25,7 +25,8 @@ script:
     - cat oofile
     # look at https://gist.github.com/willprice/e07efd73fb7f13f917ea
     - make hellomakef && ./hellomakef.exe
-    - uname
+    - uname; whoami
+    - who am i
     - echo "End of script"
 #after_success: # Does this work?
     - echo "After SUCCESS"
