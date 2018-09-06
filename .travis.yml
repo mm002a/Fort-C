@@ -4,9 +4,9 @@ addons:
     - gfortran
 language: c
 notifications:
-  #email:
-    #recipients: Maybe we can have email OR slack, but not both!
-       # - chrispthompson@gmail.com
+  email:
+    recipients: # We can have email OR slack, but not both!
+        - chrispthompson@gmail.com
  #notifications:
     #slack: ibm-uk-labs:token??
     #template: #Doesn't seem to do anything! Does it only work for irc?
