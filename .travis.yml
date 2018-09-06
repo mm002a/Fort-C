@@ -28,6 +28,6 @@ script:
     - uname -a
     - echo "End of script"
 #after_success: # Does this work?
-   - echo "After SUCCESS"
-   - uname -a
-   - .travis/push.sh
+    - echo "After SUCCESS"
+    - uname -a
+    - .travis/push.sh
