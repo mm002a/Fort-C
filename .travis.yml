@@ -24,9 +24,10 @@ script:
     - pwd
     - cat oofile
     # look at https://gist.github.com/willprice/e07efd73fb7f13f917ea
-    - git status
-    - git add .
-    - git commit -a -message="From Travis-ci"
-    - git status
-    - git push --branch=master https://github.com/mm002a/Fort-C.git mm002a/Fort-C
     - make hellomakef && ./hellomakef.exe
+    - make hellomakef && ./hellomakef.exe
+after_success:
+  - .travis/push.sh
+env:
+  global:
+    secure: # Add weird token
