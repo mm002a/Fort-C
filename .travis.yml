@@ -8,11 +8,11 @@ notifications:
     #recipients: Maybe we can have email OR slack, but not both!
        # - chrispthompson@gmail.com
  #notifications:
-    slack: ibm-uk-labs:42MJmUKnRLBKZXzfz3sK5XKy
-    template: #Doesn't seem to do anything! Does it only work for irc?
-      - "%{repository_slug} (%{commit}) : %{message} %{foo} "
-      - "Build details: %{build_url}"
-      - "Result: %{result}"
+    #slack: ibm-uk-labs:token??
+    #template: #Doesn't seem to do anything! Does it only work for irc?
+    #  - "%{repository_slug} (%{commit}) : %{message} %{foo} "
+    #  - "Build details: %{build_url}"
+    #  - "Result: %{result}"
     on_success: always
     on_failure: always
 compiler:
